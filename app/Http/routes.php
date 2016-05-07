@@ -20,7 +20,7 @@ Route::group(['middleware' => ['web']], function() {
     Route::get('/movies', 'MovieController@getIndex');
     Route::get('/movie/create', 'MovieController@getCreate');
     Route::post('/movie/create', 'MovieController@postCreate');
-    Route::get('/movie/{id}', 'MovieController@getShow');
+    Route::get('/movie/show/{id?}', 'MovieController@getShow');
 
     Route:: get('/practice', function() {
 

@@ -16,8 +16,8 @@ class MovieController extends Controller {
     /**
      * Responds to requests to GET /movies/show/{id}
      */
-    public function getShow($id) {
-        return 'Show an individual movie: '.$id;
+    public function getShow($id = null) {
+        return view('movies.show')->with('id',$id);
     }
 
     /**
