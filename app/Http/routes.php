@@ -24,10 +24,20 @@ Route::group(['middleware' => ['web']], function() {
 
     Route:: get('/practice', function() {
 
-        echo 'app.url: '.config('app.url');
-        echo '<br>app.env: '.config('app.env');
+        #echo 'app.url: '.config('app.url');
+        #echo '<br>app.env: '.config('app.env');
 
-        return '';
+        #return '';
+
+        $random = new Random();
+        return $random ->getRandomString(20);
+
+
     });
+
+    # Restrict certain routes to only be viewable in the local environments
+//    if(App::environment('local')) {
+        Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+//    }
 
 });
