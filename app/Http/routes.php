@@ -22,4 +22,12 @@ Route::group(['middleware' => ['web']], function() {
     Route::post('/movie/create', 'MovieController@postCreate');
     Route::get('/movie/{id}', 'MovieController@getShow');
 
+    Route:: get('/practice', function() {
+
+        echo 'app.url: '.config('app.url');
+        echo '<br>app.env: '.config('app.env');
+
+        return '';
+    });
+
 });
