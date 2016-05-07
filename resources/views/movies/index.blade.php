@@ -1,9 +1,10 @@
 @extends('layouts.master')
 
 @section('title')
-    Welcome to P4
+    All movies
 @stop
 
 @section('content')
-    Welcome to P4
+    All movies will show here
 @stop
+
