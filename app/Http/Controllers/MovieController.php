@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class MovieController extends Controller {
 
@@ -30,7 +31,14 @@ class MovieController extends Controller {
     /**
      * Responds to requests to POST /movies/create
      */
-    public function postCreate() {
-        return redirect('/movies');
+    public function postCreate(Request $request) {
+
+        $this->validate($request,[
+            'title' => 'required|min:3',
+            'director' => 'required'
+        ]);
+
+        return 'Add the book: '.$request->input('title');
+        #return redirect('/movies');
     }
 }
