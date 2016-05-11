@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'MovieController@getIndex'); #home
 Route::get('/movies', 'MovieController@getIndex');
 Route::get('/movie/create', 'MovieController@getCreate');
 Route::post('/movie/create', 'MovieController@postCreate');

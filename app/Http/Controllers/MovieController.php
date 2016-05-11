@@ -11,7 +11,10 @@ class MovieController extends Controller {
     * Responds to requests to GET /movies
     */
     public function getIndex() {
-        return view('movies.index');
+
+        $movies = \App\Movie::orderBy('id','desc')->get();
+
+        return view('movies.index')->with('movies',$movies);
     }
 
     /**
@@ -35,10 +38,23 @@ class MovieController extends Controller {
 
         $this->validate($request,[
             'title' => 'required|min:3',
-            'director' => 'required'
+            'director' => 'required',
+            'released' => 'required|min:4',
+            'cover' => 'required|url',
+            'purchase_link' => 'required|url',
         ]);
 
-        return 'Add the book: '.$request->input('title');
-        #return redirect('/movies');
+        # Add the movie (this was how we did it pre-mass assignment)
+        $movie = new \App\Movie();
+        $movie->title = $request->title;
+        $movie->director = $request->director;
+        $movie->released = $request->released;
+        $movie->cover = $request->cover;
+        $movie->purchase_link = $request->purchase_link;
+        $movie->save();
+
+        \Session::flash('message','Your movie was added');
+
+        return redirect('/movies');
     }
 }

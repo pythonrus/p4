@@ -5,6 +5,13 @@
 @stop
 
 @section('content')
-    All movies will show here
-@stop
 
+    <h1>All the movies </h1>
+
+    <div class='movie'>
+        @foreach($movies as $movie)
+            <h2>{{ $movie->title }}</h2>
+            <img src='{{ $movie->cover }}' alt='Cover for {{$movie->title}}'>
+        @endforeach
+    </div>
+@stop
