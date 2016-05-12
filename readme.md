@@ -1,27 +1,21 @@
-# Laravel PHP Framework
+# Dynamic Web Applications P4: Final Project
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p4.tulou.io>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+Web application called MovieBase which allows users to keep track of movies they've watched
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Demo
+<https://youtu.be/zqR87prLWws>
 
-## Official Documentation
+## Details for teaching team
+Completed U (update) but not C, R, and D (create, read, delete) in application.  Hope to complete those features plus user registration/login later.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Outside code, plugins, libraries, packages used in project
+* Font Awesome: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
+* Bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+* Lumen Bootswatch theme: https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css
+* Susan Buck's Foobooks example: https://github.com/susanBuck/foobooks
+* Debugbar: https://github.com/barryvdh/laravel-debugbar
+* Laravel Log Viewer: https://github.com/rap2hpoutre/laravel-log-viewer

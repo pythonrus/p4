@@ -22,11 +22,11 @@
             @foreach($movies as $movie)
                 <section class='movie'>
 
-                    <a href='/movie//show/{{$movie->id}}'><h2 class='truncate'>{{ $movie->title }}</h2></a>
+                    <a href='/movie/edit/{{$movie->id}}'><h2 class='truncate'>{{ $movie->title }}</h2></a>
 
                     <h3 class='truncate'>{{ $movie->director->first_name }} {{ $movie->director->last_name }}</h3>
 
-                    <img class='cover' src='{{ $movie->cover }}' alt='Cover for {{$movie->title}}'>
+                    <img class='cover' src='{{ $movie->cover }}' alt='Cover for {{$movie->title}}'><br>
 
                     <a href='/movie/edit/{{$movie->id}}'><i class='fa fa-pencil'></i> Edit</a><br>
                     <a href='/movie/show/{{$movie->id}}'><i class='fa fa-eye'></i> View</a><br>
