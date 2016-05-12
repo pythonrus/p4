@@ -26,13 +26,14 @@
         </div>
 
         <div class='form-group'>
-           <label>Director:</label>
-            <input
-                type='text'
-                id='director'
-                name='director'
-                value='{{ $movie->director }}'
-            >
+            <label for ='director_id'>Director:</label>
+            <select name='director_id' id='director_id'>
+                @foreach($directors_for_dropdown as $director_id => $director_name)
+                    <option value='{{$director_id}}' {{ ($movie->director_id == $director_id) ? 'SELECTED' : '' }}>
+                        {{$director_name}}
+                    </option>
+                @endforeach
+            </select>
            <div class='error'>{{ $errors->first('director') }}</div>
         </div>
 

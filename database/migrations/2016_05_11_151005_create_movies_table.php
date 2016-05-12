@@ -24,7 +24,7 @@ class CreateMoviesTable extends Migration
 
              # The rest of the fields...
              $table->string('title');
-             $table->string('director');
+             #$table->string('director');
              $table->string('released');
              $table->string('cover');
              $table->string('purchase_link');

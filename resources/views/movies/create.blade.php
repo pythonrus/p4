@@ -51,7 +51,7 @@
                type='text'
                id='cover'
                name='cover'
-               value='{{ old('cover','https://lh6.googleusercontent.com/lN1TPrsLJdWaOuaGbTQVK5UExUjFbQAQOUVmX3jv8Kj9O1BY8phJ7b3G5nP4lj7269bBFg=s190') }}'
+               value='{{ old('cover','http://covers.box.sk/newsimg/dvdmov/max1299202406-front-cover.jpg') }}'
            >
            <div class='error'>{{ $errors->first('cover') }}</div>
         </div>

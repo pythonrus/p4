@@ -76,7 +76,20 @@ class MovieController extends Controller {
 
         $movie = \App\Movie::find($id);
 
-        return view('movies.edit')->with('movie',$movie);
+        # Get all directors
+        $directors = \App\Director::orderBy('last_name','ASC')->get();
+
+        # Build array for directors dropdown
+        $directors_for_dropdown = [];
+        foreach($directors as $director) {
+            $directors_for_dropdown[$director->id] = $director->last_name.', '.$director->first_name;
+        }
+
+        #dump($directors_for_dropdown);
+
+        return view('movies.edit')
+        ->with('movie',$movie)
+        ->with('directors_for_dropdown',$directors_for_dropdown);
     }
 
     /**
@@ -89,7 +102,7 @@ class MovieController extends Controller {
         $movie = \App\Movie::find($request->id);
 
         $movie->title = $request->title;
-        $movie->director = $request->director;
+        $movie->director_id = $request->director_id;
         $movie->cover = $request->cover;
         $movie->released = $request->released;
         $movie->purchase_link = $request->purchase_link;
