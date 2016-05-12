@@ -3,7 +3,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
-    protected $fillable = ['title','director_id','released','cover','purchase_link','user_id'];
+    protected $fillable = ['title','director','released','cover','purchase_link','user_id'];
     /**
 	* Relationship method
 	*/

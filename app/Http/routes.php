@@ -13,8 +13,13 @@
 
 Route::get('/', 'MovieController@getIndex'); #home
 Route::get('/movies', 'MovieController@getIndex');
+
+Route::get('/movie/edit/{id?}', 'MovieController@getEdit');
+Route::post('/movie/edit', 'MovieController@postEdit');
+
 Route::get('/movie/create', 'MovieController@getCreate');
 Route::post('/movie/create', 'MovieController@postCreate');
+
 Route::get('/movie/show/{id?}', 'MovieController@getShow');
 
 Route:: get('/practice', function() {
