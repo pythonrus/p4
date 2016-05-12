@@ -13,7 +13,7 @@
 
     <h1>All the movies </h1>
 
-    <h3>The purpose of this site is to allow you to create, read, update, and delete movies.  Create, read, and delete unfinished. </h3>
+    <h3>The purpose of this site is to allow you to create, read, update, and delete movies.  Work in progress. </h3>
 
     @if(sizeof($movies) == 0)
         You have not added any movies, you can <a href='/movie/create'>add a movie now to get started</a>.

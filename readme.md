@@ -10,7 +10,7 @@ Web application called MovieBase which allows users to keep track of movies they
 <https://youtu.be/zqR87prLWws>
 
 ## Details for teaching team
-Completed U (update) but not C, R, and D (create, read, delete) in application.  Hope to complete those features plus user registration/login later.
+U (update) but not C, R, and D (create, read, delete) implemented in application.  Hope to complete those features plus user registration/login later.
 
 ## Outside code, plugins, libraries, packages used in project
 * Font Awesome: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
