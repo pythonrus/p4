@@ -13,6 +13,8 @@
 
     <h1>All the movies </h1>
 
+    <h3>The purpose of this site is to allow you to create, read, update, and delete movies.  Create, read, and delete unfinished. </h3>
+
     @if(sizeof($movies) == 0)
         You have not added any movies, you can <a href='/movie/create'>add a movie now to get started</a>.
     @else
@@ -25,12 +27,6 @@
                     <h3 class='truncate'>{{ $movie->director->first_name }} {{ $movie->director->last_name }}</h3>
 
                     <img class='cover' src='{{ $movie->cover }}' alt='Cover for {{$movie->title}}'>
-
-                    <div class='tags'>
-                        @foreach($movie->tags as $tag)
-                            <div class='tag'>{{ $tag->name }}</div>
-                        @endforeach
-                    </div>
 
                     <a href='/movie/edit/{{$movie->id}}'><i class='fa fa-pencil'></i> Edit</a><br>
                     <a href='/movie/show/{{$movie->id}}'><i class='fa fa-eye'></i> View</a><br>
